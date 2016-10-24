@@ -1,1 +1,1 @@
-<?phpclass MostrarJson {    public static function TraerTodosLasMascotas() {    	$data = file_get_contents("archivos/mascotas.json");        $mascotas = json_decode()    }}
+<?phpclass MostrarJson {    public static function TraerTodosLasMascotas() {    	$data = file_get_contents("archivos/mascotas.json");        $mascotas = json_decode($data,true);        return $mascotas;    }}

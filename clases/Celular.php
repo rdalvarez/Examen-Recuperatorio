@@ -29,4 +29,9 @@ class Celular {
 			$this->cantSIM = $cantSIM;
 		}
 	}
+
+	public static GuardarEnJson(){
+		
+	}
+
 }

@@ -22,7 +22,7 @@ function MostrarGrilla() {
         async: true
         })
         .done(function (tabla) {
-            
+            console.log("MostrarGrilla: "+tabla);
             $("#divGrilla").html(tabla);
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
