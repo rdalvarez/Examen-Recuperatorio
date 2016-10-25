@@ -71,10 +71,21 @@ function CargarFormEliminarMascota() {
 }
 
 function AgregarCelular() {
-
     var pagina = "./nexoAdministrador.php";
-    var celular = {};//crear objeto JSON
-    
+    var sim;
+    if ($("#rdoSIMUno").is(':checked')) {
+        var sim = "1";
+    }else{
+        var sin = "2";
+    }
+    var marca = $("#txtMarca").val();
+    var so = $("#cboSO").val();
+
+    var celular = {"marca":marca,"so":so,"sim":sim};
+
+
+    //crear objeto JSON
+
     alert("Implementar case \"agregarCelular\"");
 
     $.ajax({
@@ -88,6 +99,7 @@ function AgregarCelular() {
         async: true
     })
     .done(function (objJson) {
+        console.log(objJson);
 
         if (!objJson.Exito) {
             alert(objJson.Mensaje);
